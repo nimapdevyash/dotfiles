@@ -19,14 +19,14 @@ list() {
 
 [ "$1" = --list ] && { list; exit; }
 
-out=$(list | SHELL=bash fzf --ansi --delimiter '\t' --with-nth 2 --print-query \
+out=$(list | SHELL=bash fzf --height 100% --ansi --delimiter '\t' --with-nth 2 --print-query \
   --layout reverse --info inline-right --no-separator --no-scrollbar \
   --prompt '❯ ' --pointer '▌' --marker ' ' \
   --border rounded --border-label ' 󰍹 sessions ' --border-label-pos 3 \
   --padding 1,2 \
-  --header $'enter switch · ctrl-x kill · new name + enter creates\n' \
+  --header $'enter switch · ctrl-x kill\nnew name + enter creates\n' \
   --preview 'tmux capture-pane -ep -t ={1}:' \
-  --preview-window 'right,60%,border-left,follow' \
+  --preview-window 'right,65%,border-left,follow' \
   --preview-label ' preview ' \
   --bind "ctrl-x:execute-silent([ {1} != \"\$(tmux display -p '#{client_session}')\" ] && tmux kill-session -t ={1})+reload($0 --list)" \
   --color "bg:-1,bg+:#2A2D35,fg:#D7DDE6,fg+:#FFFFFF,hl:#D095A4,hl+:#D095A4" \

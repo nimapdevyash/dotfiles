@@ -4,7 +4,7 @@
 # Adapted from vayu for fzf 0.44 (no --ghost / --input-border / accept-or-print-query):
 # with empty input, --print-query still emits the query on Enter.
 
-sel=$(: | fzf --print-query --no-info --no-separator --no-scrollbar \
+sel=$(: | fzf --height 100% --print-query --no-info --no-separator --no-scrollbar \
       --prompt '❯ ' --layout reverse \
       --border rounded --border-label ' Cmdline ' --border-label-pos 3 \
       --color 'bg:-1,prompt:#D095A4,query:#D7DDE6,border:#D095A4,label:#D095A4' | head -n1)

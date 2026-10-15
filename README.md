@@ -14,7 +14,7 @@ Based on [vayu](https://github.com/theyashsawarkar/vayu)'s tmux setup ("Rose Dus
 with extra stability guards, session restore, and popups. tmux 3.4, kitty, Wayland.
 
 Plugins (tpm bootstraps itself on first launch): tmux-resurrect, tmux-continuum, extrakto.
-Needs `fzf`, `wl-copy`, `notify-send`, and a Nerd Font; `lazygit` / `btop` for their popups.
+Needs `fzf`, `wl-copy`, `notify-send`, and a Nerd Font; `lazygit` / `btop` / `gh-dash` / `posting` for their popups.
 
 Prefix is `Ctrl-a`. `prefix ?` lists every binding with a description.
 
@@ -23,6 +23,8 @@ Prefix is `Ctrl-a`. `prefix ?` lists every binding with a description.
 | `prefix s` | Session picker: live preview, `ctrl-x` kill, type a new name to create |
 | `prefix :` | Floating command prompt |
 | `prefix g` / `t` / `T` | lazygit / scratch shell / btop popup |
+| `prefix G` | gh-dash popup: PRs/issues (needs `gh extension install dlvhdr/gh-dash`) |
+| `prefix P` | Posting HTTP client popup (toggle) |
 | `prefix Tab` | extrakto: fuzzy-pick paths, URLs, words from the pane |
 | `prefix \|` / `-` | Split in current directory |
 | `prefix S` | Toggle synchronized input across panes |
